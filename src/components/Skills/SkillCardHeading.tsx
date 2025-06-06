@@ -1,4 +1,4 @@
-export default function SkillHeading({ domain }: { domain: string }) {
+export default function SkillCardHeading({ domain }: { domain: string }) {
     return (
         <div className="pb-6">
             <div className="text-sm text-zinc-400">export function</div>

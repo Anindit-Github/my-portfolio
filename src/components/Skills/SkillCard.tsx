@@ -2,7 +2,7 @@ import * as motion from "motion/react-client"
 import type { Variants } from "motion/react"
 import { springTransition } from "@/lib/common";
 import clsx from "clsx";
-import SkillHeading from "./SkillHeading";
+import SkillCardHeading from "./SkillCardHeading";
 
 
 const cardVariant: Variants = {
@@ -46,7 +46,7 @@ export default function SkillCard({domain, skillInfo, custom}: {domain: string, 
             variants={cardVariant}
             custom={custom}
         >
-            <SkillHeading domain={domain}/>
+            <SkillCardHeading domain={domain}/>
 
             {/* Skills */}
             <div className="space-y-3">

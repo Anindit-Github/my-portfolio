@@ -1,6 +1,6 @@
 import Navbar from "@/components/Shared/NavBar";
 import HeroSection from '@/components/Hero/HeroSection'
-import SkillCards from "@/components/Skills/SkillCards";
+import SkillSection from "@/components/Skills/SkillsSection";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <Navbar />
       <main className="scroll-smooth pt-32">
         <section id="hero" className="pb-32"><HeroSection/></section>
-        <section id="skills"><SkillCards/></section>
+        <section id="skills"><SkillSection/></section>
       </main>
     </>
   );
