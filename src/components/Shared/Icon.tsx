@@ -1,4 +1,5 @@
 import { ReactIcon, NodeIcon, JsIcon, HtmlIcon, CSSIcon, AWSIcon } from '@/components/Shared/AllIcons';
+import { GitHub } from 'react-feather';
 
 
 // Fixing icons object to store components, not elements:
@@ -8,7 +9,8 @@ const iconsMap = {
     javascript: JsIcon,
     html: HtmlIcon,
     css: CSSIcon,
-    aws: AWSIcon
+    aws: AWSIcon,
+    github: GitHub
   };
 
 type IconName = keyof typeof iconsMap;

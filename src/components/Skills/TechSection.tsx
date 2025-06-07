@@ -1,14 +1,31 @@
+"use client"
+import * as motion from "motion/react-client"
 import { techStack } from "@/lib/constants";
 import { MacButtons } from "../Shared";
 import Icon from "../Shared/Icon";
+import { springTransition } from "@/lib/common";
+import { Variants } from "motion/react";
 
-export default function TechSection() {
+const techIconVariant: Variants = {
+    offscreen: {
+        x:-30,
+        opacity: 0,
+    },
+    onscreen: (custom) => ({
+        x: 0,
+        opacity: 1,
+        transition: springTransition(custom?.delay || 0, 0.5),
+    }),
+}
+
+export const TechSection = () =>  {
+
     return (
         <div className="container font-mono text-zinc-300 w-full my-10 backdrop-blur-3xl border border-white/10 rounded-xl 
-        bg-gradient-to-br from-cyan-950 via-slate-900 to-gray-900">
+        bg-gradient-to-br from-sky-950 via-slate-900 to-gray-900">
             <div className="heading-container m-6 h-12 border-b-2 border-b-white/5 flex justify-between">
                 <div className="flex">
-                    <div className="text-sm font-bold rounded-t-lg bg-gray-800 py-2 px-3 mb-2">
+                    <div className="text-sm font-bold rounded-t-lg bg-slate-900 py-2 px-3 mb-2">
                         technologies.ts
                     </div>
                     <div className="text-sm font-bold py-2 px-3 mb-2">
@@ -37,15 +54,24 @@ export default function TechSection() {
                         const technologies = {'['}
                     </p>
 
-                    <div className="flex flex-wrap my-4">
+                    <div
+                        className="flex flex-wrap my-4"
+
+                    >
                         {(Object.keys(techStack) as Array<keyof typeof techStack>).map((tech, index) => (
 
-                        <div key={index} className="flex w-1/4 py-2">
-                            <div className="rounded-xl bg-slate-900 border-1 border-white/10 p-3 mr-3 ">
-                                <Icon name={tech} width={22} height={22} className="text-blue-500" />
-                            </div>
-                            <div className="py-3">{techStack[tech]}</div>
-                        </div>
+                            <motion.div key={index} className="flex w-1/4 py-2"
+                                initial="offscreen"
+                                whileInView="onscreen"
+                                viewport={{ amount: 0.2 }}
+                                variants={techIconVariant}
+                                custom={{ delay: index * 0.6 }}
+                            >
+                                <div className="rounded-xl bg-slate-900 border-1 border-white/10 p-3 mr-3 ">
+                                    <Icon name={tech} width={22} height={22} className="text-blue-500" />
+                                </div>
+                                <div className="py-3">{techStack[tech]}</div>
+                            </motion.div>
                         ))}
                     </div>
 

@@ -13,6 +13,7 @@ export const techStack = {
     html:'HTML5',
     css:'CSS3',
     aws:'AWS',
+    github: 'Github'
 }
 
 
