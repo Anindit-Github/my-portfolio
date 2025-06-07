@@ -1,0 +1,1 @@
+export { default as TechSection } from '@/components/Technologies/TechSection';

@@ -1,14 +1,16 @@
-import Navbar from "@/components/Shared/NavBar";
-import HeroSection from '@/components/Hero/HeroSection'
-import SkillSection from "@/components/Skills/SkillsSection";
+import { NavBar } from "@/components/Shared";
+import { HeroSection } from '@/components/Hero'
+import { SkillSection } from "@/components/Skills";
+import { TechSection } from "@/components/Technologies";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <NavBar />
       <main className="scroll-smooth pt-32">
-        <section id="hero" className="pb-32"><HeroSection/></section>
-        <section id="skills"><SkillSection/></section>
+        <section id="hero" className="pb-32"><HeroSection /></section>
+        <section id="skills" className="pb-32"><SkillSection /></section>
+        <section id="skills"><TechSection /></section>
       </main>
     </>
   );

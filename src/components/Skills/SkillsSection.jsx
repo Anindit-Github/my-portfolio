@@ -1,6 +1,6 @@
-import TerminalCaptions from '../Shared/TerminalCaptions'
-import SkillCards from './SkillCards'
-import { terminalConsts } from '../../lib/constants'
+import { TerminalCaptions } from '@/components/Shared'
+import {SkillCards} from '@/components/Skills'
+import { terminalConsts } from '@/lib/constants'
 export default function SkillsSection() {
     return (
         <div className="flex justify-center w-full px-4 sm:px-6">

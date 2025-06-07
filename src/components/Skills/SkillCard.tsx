@@ -2,7 +2,7 @@ import * as motion from "motion/react-client"
 import type { Variants } from "motion/react"
 import { springTransition } from "@/lib/common";
 import clsx from "clsx";
-import SkillCardHeading from "./SkillCardHeading";
+import { SkillCardHeading } from '@/components/Skills';
 
 
 const cardVariant: Variants = {
@@ -30,7 +30,7 @@ const skillBarVariant: Variants = {
     },
 }
 
-export default function SkillCard({domain, skillInfo, custom}: {domain: string, skillInfo: Array<{name: string, percent: number}>, custom: { delay: number };}) {
+export const SkillCard = ({domain, skillInfo, custom}: {domain: string, skillInfo: Array<{name: string, percent: number}>, custom: { delay: number };}) => {
     return (
         <motion.div
         className={clsx(

@@ -1,7 +1,5 @@
 import Button from "@/components/Shared/Button"
-import HeroName from '@/components/Hero/HeroName'
-import HeroDescriptionCard from "@/components/Hero/HeroDescriptionCard"
-import HeroImageCard from "@/components/Hero/HeroImageCard"
+import {HeroName, HeroDescriptionCard, HeroImageCard} from '@/components/Hero'
 import Social from "@/components/Shared/Social"
 export default function HeroSection() {
     return (

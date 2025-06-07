@@ -1,9 +1,9 @@
 "use client"
 import { skills } from "@/lib/data";
-import SkillCard from "./SkillCard";
+import {SkillCard} from '@/components/Skills';
 import { useEffect, useState } from "react";
 
-export default function SkillCards() {
+export const SkillCards = () => {
     const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {

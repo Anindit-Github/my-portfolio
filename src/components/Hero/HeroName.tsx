@@ -1,8 +1,7 @@
-import { Terminal } from "react-feather";
 import TerminalCaptions from "../Shared/TerminalCaptions";
 import { terminalConsts } from "@/lib/constants";
 
-export default function HeroDefinitionName() {
+export const HeroName = () => {
     return (
 
         <div>
