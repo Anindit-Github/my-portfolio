@@ -1,6 +1,7 @@
 import { TerminalCaptions } from '@/components/Shared'
 import {SkillCards} from '@/components/Skills'
 import { terminalConsts } from '@/lib/constants'
+import TechSection from './TechSection'
 export default function SkillsSection() {
     return (
         <div className="flex justify-center w-full px-4 sm:px-6">
@@ -20,6 +21,7 @@ export default function SkillsSection() {
                     </p>
                 </div>
                 <SkillCards />
+                <TechSection/>
             </div>
         </div>
     )

@@ -6,3 +6,13 @@ export const terminalConsts = {
     skills: 'skills.map((skill) => skill.level)'
 }
 
+export const techStack = {
+    react:'React',
+    node:'Node.js',
+    javascript:'Javascript',
+    html:'HTML5',
+    css:'CSS3',
+    aws:'AWS',
+}
+
+
