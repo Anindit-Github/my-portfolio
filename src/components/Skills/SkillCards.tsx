@@ -21,7 +21,7 @@ export const SkillCards = () => {
         <div className="flex flex-wrap justify-center gap-6">
             {Object.entries(skills).map(([domain, skillInfo], index) => (
                 <SkillCard key={domain} domain={domain} skillInfo={skillInfo} 
-                custom={isLargeScreen ? { delay: index * 0.4 } : { delay: 0 }}
+                custom={isLargeScreen ? { delay: (index+2) * 1 } : { delay: 0 }}
                 />
             ))}
         </div>

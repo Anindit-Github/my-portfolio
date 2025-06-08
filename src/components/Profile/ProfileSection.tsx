@@ -13,7 +13,7 @@ export default function ProfileSection() {
             <div className="w-full max-w-5xl">
 
                 <ProfileDescription />
-                <div className="container font-mono text-zinc-300 w-full mt-10 backdrop-blur-3xl border-white/10 rounded-xl border">
+                <div className="container font-mono text-zinc-300 w-full mt-10 backdrop-blur-3xl border-white/10 rounded-xl">
                     <div className="first-row flex">
                         <ImageCard height={350} width={250} caption="profile.jpeg" showAbsContent={false} imgName="ProfilePic" />
                         <div className="container font-mono ml-12 text-zinc-300 w-full backdrop-blur-3xl border border-white/10 rounded-xl">

@@ -65,7 +65,7 @@ export const TechSection = () =>  {
                                 whileInView="onscreen"
                                 viewport={{ amount: 0.2 }}
                                 variants={techIconVariant}
-                                custom={{ delay: index * 0.6 }}
+                                custom={{ delay: (index + 1) * 0.6 }}
                             >
                                 <div className="rounded-xl bg-slate-900 border-1 border-white/10 p-3 mr-3 ">
                                     <Icon name={tech} width={22} height={22} className="text-blue-500" />
