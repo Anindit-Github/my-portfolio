@@ -15,12 +15,12 @@ export default function Navbar() {
                     <Terminal size={20} />
                     _home
                 </a></li>
-                <li><a href="#hero" className="flex items-center gap-1 hover:text-zinc-200">
+                <li><a href="#skills" className="flex items-center gap-1 hover:text-zinc-200">
                     <Code size={20} />
                     _skills
                 </a></li>
                 <li><a href="#projects" className="hover:text-zinc-200">_projects</a></li>
-                <li><a href="#contact" className="hover:text-zinc-200">_about</a></li>
+                <li><a href="#about" className="hover:text-zinc-200">_about</a></li>
                 <li><a href="#contact" className="hover:text-zinc-200">_blog</a></li>
                 <li><a href="#contact" className="hover:text-zinc-200">_contact</a></li>
             </ul>

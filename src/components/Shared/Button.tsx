@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { Terminal } from 'react-feather';
+import { Terminal, FileText } from 'react-feather';
 
 type ButtonProps = {
     color: string;
@@ -10,6 +10,7 @@ type ButtonProps = {
 const iconComponents: Record<string, React.ElementType | ''> = {
     'View Projects': '',
     'Contact Me': Terminal,
+    'Download Resume': FileText
 };
 
 export default function Button({ color, text, component }: ButtonProps) {

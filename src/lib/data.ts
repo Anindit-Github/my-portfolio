@@ -1,3 +1,5 @@
+import { SectionDetail } from "@/components/Profile/types";
+
 export const skills = {
     FrontendDeveloper: [
       { name: "React.js / Next.js", percent: 90 },
@@ -21,4 +23,72 @@ export const skills = {
       { name: "Testing (Jest, React Testing)", percent: 80 },
     ]
   };
+
+export const descTile:Record<"education" | "interests", SectionDetail[]> = {
+  education: [
+    {
+      section: 'university',
+      iconColor: 'teal',
+      details: {
+        info: 'B.Tech in Electronics & Instrumentation',
+        from: 'Odisha University of Technology and Research',
+        year: 2025
+      },
+    },
+    {
+      section: 'certification',
+      iconColor: 'purple',
+      details: {
+        info: 'Apollo Graphql - Associate Certification',
+        from: 'Apollo',
+        year: 2025
+      },
+    },
+    {
+      section: 'certification',
+      iconColor: 'purple',
+      details: {
+        info: 'AWS Cloud Practitioner Certification',
+        from: 'Amazon Web Services',
+        year: 2023
+      },
+    },
+    {
+      section: 'certification',
+      iconColor: 'purple',
+      details: {
+        info: 'Excellence Awards',
+        from: 'Deloitte',
+        year: 2025
+      }
+    }
+  ],
+  interests: [
+    {
+      section: 'singing',
+      iconColor: 'teal',
+      details: {
+        info: 'Singing',
+        from: 'Classical and Bollywood',
+      },
+    },
+    {
+      section: 'sketching',
+      iconColor: 'teal',
+      details: {
+        info: 'Sketching',
+        from: 'Portraits & Symbolism'
+      },
+    },
+    {
+      section: 'travelling',
+      iconColor: 'teal',
+      details: {
+        info: 'Travelling',
+        from: 'Hiking and Outdoor activities'
+      },
+    },
+  ],
+}
+
   
