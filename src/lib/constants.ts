@@ -23,4 +23,8 @@ export const UserProfileInfo = [
     "I'm passionate about clean code, performance optimization, and creating intuitive user experiences. When I'm not coding, you can find me exploring new technologies and expanding my skill set."
 ]
 
+export const UserDescription = 'The story behind the code - personal journey, professional experience, and what drives me as a developer.';
+
+export const SkillsDescription = "I've worked with a wide range of technologies across the full stack, with expertise in modern JavaScript frameworks, backend systems, and cloud infrastructure.";
+
 

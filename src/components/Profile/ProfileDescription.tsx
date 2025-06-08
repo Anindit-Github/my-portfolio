@@ -1,5 +1,6 @@
-import { terminalConsts } from "@/lib/constants";
+import { terminalConsts, UserDescription } from "@/lib/constants";
 import { TerminalCaptions } from "../Shared";
+import { DescPara } from "../Shared/DescPara";
 
 export const ProfileDescription = () => {
     return (
@@ -14,10 +15,7 @@ export const ProfileDescription = () => {
                 <span className="text-indigo-600 pr-4">extends</span>
                 <span className="text-purple-500 pr-4">Developer</span>
             </div>
-
-            <p className="text-[14px] text-zinc-400 border-l-2 border-zinc-600 p-4 my-4 max-w-[600px]">
-                The story behind the code - personal journey, professional experience, and what drives me as a developer.
-            </p>
+            <DescPara text={UserDescription}/>
         </div>
     )
 }

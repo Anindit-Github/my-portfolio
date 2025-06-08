@@ -1,12 +1,13 @@
 import { TerminalCaptions } from '@/components/Shared'
 import {SkillCards} from '@/components/Skills'
-import { terminalConsts } from '@/lib/constants'
+import { SkillsDescription, terminalConsts } from '@/lib/constants'
 import {TechSection} from './TechSection'
+import { DescPara } from '../Shared/DescPara'
+import { Scaffold } from '../Shared/Scaffold'
 export default function SkillsSection() {
     return (
-        <div className="flex justify-center w-full px-4 sm:px-6">
-            <div className="w-full max-w-5xl">
-                <div className="mb-10">
+        <Scaffold>
+                <div className="mb-10 border">
                     <TerminalCaptions text={terminalConsts.skills} />
                     <br />
                     <div className="font-mono text-4xl font-bold">
@@ -16,13 +17,10 @@ export default function SkillsSection() {
                         <span className="text-purple-500 pr-4">{"{"}</span>
                     </div>
 
-                    <p className="text-[14px] text-zinc-400 border-l-2 border-zinc-600 p-4 my-4 max-w-[600px]">
-                        I've worked with a wide range of technologies across the full stack, with expertise in modern JavaScript frameworks, backend systems, and cloud infrastructure.
-                    </p>
+                    <DescPara text={SkillsDescription} />
                 </div>
                 <SkillCards />
                 <TechSection/>
-            </div>
-        </div>
+        </Scaffold>
     )
 }
