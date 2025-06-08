@@ -6,7 +6,6 @@ export const ProfileDescription = () => {
     return (
 
         <div className="mb-10">
-
             <TerminalCaptions text={terminalConsts.profile} />
             <br />
             <div className="font-mono text-4xl font-bold">

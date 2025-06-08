@@ -4,7 +4,8 @@ export const MAC_BUTTON_ORDER = ['RED', 'YELLOW', 'GREEN'] as const;
 export const terminalConsts = {
     developer: 'developer:~$',
     skills: 'skills.map((skill) => skill.level)',
-    profile: 'developer.profile'
+    profile: 'developer.profile',
+    projects: 'git checkout projects'
 }
 
 export const techStack = {
@@ -26,5 +27,7 @@ export const UserProfileInfo = [
 export const UserDescription = 'The story behind the code - personal journey, professional experience, and what drives me as a developer.';
 
 export const SkillsDescription = "I've worked with a wide range of technologies across the full stack, with expertise in modern JavaScript frameworks, backend systems, and cloud infrastructure.";
+
+export const ProjectsDescription = "A collection of my recent projects and applications. Each project represents a unique challenge and opportunity to explore different technologies and solutions."
 
 
