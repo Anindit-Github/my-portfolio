@@ -1,21 +1,10 @@
 "use client"
 import { skills } from "@/lib/data";
 import {SkillCard} from '@/components/Skills';
-import { useEffect, useState } from "react";
+import {useWindowSize} from '@/hooks/useWindowSize'
 
 export const SkillCards = () => {
-    const [isLargeScreen, setIsLargeScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 1024); 
-    };
-
-    handleResize(); 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+    const isLargeScreen = useWindowSize();
 
     return (
         <div className="flex flex-wrap justify-center gap-6">
