@@ -1,6 +1,6 @@
 export const HeroDescriptionCard = () => {
   return (
-    <div className="w-[500px] border-l-2 border-cyan-500 flex-col rounded-t-lg h-32 flex items-center mt-4 py-4 bg-gray-800">
+    <div className="max-w-full md:max-w-[500px] border-l-2 border-cyan-500 flex-col md:min-h-32 rounded-t-lg flex items-center mt-4 py-4 pr-4 bg-gray-800 m-2">
       <div className="text-white font-bold px-4">
         I build modern web applications using React, Next.js, Node.js, and AWS.
       </div>

@@ -17,7 +17,7 @@ export const HeroName = () => {
             from-teal-200 via-teal-300 via-cyan-400 via-blue-400 
             via-blue-500 via-violet-400 via-violet-300 to-purple-700 bg-clip-text text-transparent self-center">Panigrahi</p>
             </div>
-            <div className="my-4 font-mono font-semibold w-full text-lg md:text-xl">
+            <div className="my-6 font-mono font-semibold w-full text-xl md:text-xl">
                 <span className="text-cyan-400">function</span>
                 <span className="pl-2 text-zinc-300">FullStackDeveloper</span>
                 <span className="text-fuchsia-600">()</span>

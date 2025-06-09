@@ -15,9 +15,9 @@ export default function ProfileSection() {
             <div className="container font-mono text-zinc-300 w-full mt-10 backdrop-blur-3xl border-white/10 rounded-xl">
                 <div className="first-row flex">
                     <ImageCard height={350} width={250} caption="profile.jpeg" showAbsContent={false} imgName="ProfilePic" />
-                    <div className="container font-mono ml-12 text-zinc-300 w-full backdrop-blur-3xl border border-white/10 rounded-xl">
+                    <div className="container font-mono ml-6 text-zinc-300 w-full backdrop-blur-3xl border border-white/10 rounded-xl">
                         <SectionHeading text="constructor" />
-                        <div className="profile-content m-5 border-l-2 border-l-white/10 pl-4 font-bold text-sm">
+                        <div className="profile-content m-5 border-l-2 border-l-white/10 pl-4 font-bold text-md">
                             {UserProfileInfo.map((content, index) => (
                                 <p key={index} className="mb-3">
                                     {content}
@@ -29,7 +29,7 @@ export default function ProfileSection() {
 
                 <div className="second-row flex ">
                     <UserProfile />
-                    <div className="education w-2/5 font-mono ml-12 my-4 text-zinc-300 backdrop-blur-3xl border border-white/10 rounded-xl">
+                    <div className="education w-2/5 font-mono ml-6 my-4 text-zinc-300 backdrop-blur-3xl border border-white/10 rounded-xl">
                         <SectionHeading text='education' />
                         {descTile.education.map((item: SectionDetail, index) => (
                             <DescTile key={index} sectionDetail={item} />
@@ -37,7 +37,7 @@ export default function ProfileSection() {
 
                     </div>
 
-                    <div className="interests flex-1 font-mono ml-12 my-4 text-zinc-300 backdrop-blur-3xl border border-white/10 rounded-xl">
+                    <div className="interests flex-1 font-mono ml-6 my-4 text-zinc-300 backdrop-blur-3xl border border-white/10 rounded-xl">
                         <SectionHeading text='interests' />
                         {descTile.interests.map((item: SectionDetail, index) => (
                             <DescTile key={index} sectionDetail={item} />

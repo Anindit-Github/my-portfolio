@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html {
+html,body {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
+  overflow-x: hidden;
 }
