@@ -1,14 +1,40 @@
-// components/Navbar.tsx
 "use client"
 import { Terminal, Code } from 'react-feather';
 import { HamburgerMenu } from './HamburgerMenu';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const handleMenu = () => {
-        setIsOpen(!isOpen);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  const handleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
     }
+
+    if (isOpen) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isOpen]);
 
     return (
         <nav className="p-6 fixed top-0 w-full shadow z-50 bg-slate-900 opacity-95 backdrop-blur-2xl  border-b border-white/10 flex justify-center">
@@ -36,9 +62,9 @@ export default function Navbar() {
                     <li><a href="#contact" className="hover:text-zinc-200">_blog</a></li>
                     <li><a href="#contact" className="hover:text-zinc-200">_contact</a></li>
                 </ul>
-                <HamburgerMenu size={24} handleMenu={handleMenu} isOpen={isOpen} />
+                <HamburgerMenu size={24} handleMenu={handleMenu} isOpen={isOpen} buttonRef={buttonRef}/>
                 {isOpen && (
-                    <div onClick={handleMenu} className="ham-menu-container absolute top-full w-full right-0 mt-4 h-64 bg-linear-to-b from-slate-800 to-slate-900 rounded-xl shadow-lg backdrop-blur-3xl border border-white/5 z-50">
+                    <div ref={menuRef} onClick={handleMenu} className="ham-menu-container absolute top-full w-full right-0 mt-4 h-64 bg-linear-to-b from-slate-800 to-slate-900 rounded-xl shadow-lg backdrop-blur-3xl border border-white/5 z-50">
                         <ul className="font-mono gap-6 content-center text-zinc-400 font-bold">
                             <li>
                                 <a href="#hero" className="flex items-center gap-1 hover:text-zinc-200 p-4">
