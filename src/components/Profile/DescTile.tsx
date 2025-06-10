@@ -37,9 +37,9 @@ export const DescTile = ({ sectionDetail }: {
             )}>
                 <Icon />
             </div>
-            <div className="text-sm font-bold text-[12px]">
+            <div className="text-sm md:text-[12px] font-bold">
                 {info}
-                <p className="text-[10px]">{year ? `${from} - ${year}` : from}</p>
+                <p className="text-[12px] md:text-[11px]">{year ? `${from} - ${year}` : from}</p>
             </div>
         </div>
     )
