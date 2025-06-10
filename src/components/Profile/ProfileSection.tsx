@@ -16,7 +16,7 @@ export default function ProfileSection() {
 
             </div>
             <div className="w-full max-w-5xl  md:grid md:grid-cols-6 gap-x-6 md:grid-rows-2">
-                <div className="flex justify-center px-2 sm:px-4 md:px-0 col-span-2">
+                <div className="flex justify-center px-2 sm:px-4 md:px-0 col-span-2 mb-12 md:mb-0">
                     <ImageCard height={350} width={300} caption="profile.jpeg" showAbsContent={false} imgName="ProfilePic" />
                 </div>
                 <div className="container font-mono text-zinc-300 w-full backdrop-blur-3xl border border-white/10 rounded-xl col-span-4">

@@ -8,7 +8,7 @@ export const ProfileDescription = () => {
         <div className="mb-10">
             <TerminalCaptions text={terminalConsts.profile} />
             <br />
-            <div className="font-mono text-4xl font-bold">
+            <div className="font-mono md:text-4xl text-3xl font-bold">
                 <div className="block md:inline">
 
                     <span className="text-cyan-600 pr-4">class</span>

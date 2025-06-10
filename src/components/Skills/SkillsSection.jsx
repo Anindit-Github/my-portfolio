@@ -7,7 +7,7 @@ import { Scaffold } from '../Shared/Scaffold'
 export default function SkillsSection() {
     return (
         <Scaffold>
-                <div className="mb-10 border">
+                <div className="mb-10">
                     <TerminalCaptions text={terminalConsts.skills} />
                     <br />
                     <div className="font-mono text-4xl font-bold">
