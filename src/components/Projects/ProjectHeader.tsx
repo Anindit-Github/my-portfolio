@@ -4,7 +4,7 @@ import { DescPara } from "../Shared/DescPara"
 
 export const ProjectHeader = () => {
     return (
-        <div className="mb-10 border">
+        <div className="mb-10">
             <TerminalCaptions text={terminalConsts.projects} />
             <br />
             <div className="font-mono text-4xl font-bold">
