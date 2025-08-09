@@ -1,19 +1,5 @@
-import { ReactIcon, NodeIcon, JsIcon, HtmlIcon, CSSIcon, AWSIcon } from '@/components/Shared/AllIcons';
-import { GitHub } from 'react-feather';
-
-
-// Fixing icons object to store components, not elements:
-const iconsMap = {
-    react: ReactIcon,
-    node: NodeIcon,
-    javascript: JsIcon,
-    html: HtmlIcon,
-    css: CSSIcon,
-    aws: AWSIcon,
-    github: GitHub
-  };
-
-type IconName = keyof typeof iconsMap;
+import { IconsMap } from "@/lib/common";
+import { IconName } from "@/lib/types";
 
 // type IconProps = {
 //   name: IconName;
@@ -29,7 +15,7 @@ type IconProps = {
 
 const Icon = ({ name, ...props }: IconProps) => {
   //return React.createElement(iconsMap[name], { className, width, height });
-  const Component = iconsMap[name];
+  const Component = IconsMap[name];
   return <Component {...props} />;
 };
 

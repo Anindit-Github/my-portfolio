@@ -1,5 +1,16 @@
+import { NavLinksType } from "./types";
 
-export const MAC_BUTTON_ORDER = ['RED', 'YELLOW', 'GREEN'] as const;
+export enum MacButton {
+  RED = "RED",
+  YELLOW = "YELLOW",
+  GREEN = "GREEN",
+}
+
+export const MAC_BUTTON_ORDER = [
+  MacButton.RED,
+  MacButton.YELLOW,
+  MacButton.GREEN,
+] as const;
 
 export const terminalConsts = {
     developer: 'developer:~$',
@@ -28,6 +39,24 @@ export const UserDescription = 'The story behind the code - personal journey, pr
 
 export const SkillsDescription = "I've worked with a wide range of technologies across the full stack, with expertise in modern JavaScript frameworks, backend systems, and cloud infrastructure.";
 
-export const ProjectsDescription = "A collection of my recent projects and applications. Each project represents a unique challenge and opportunity to explore different technologies and solutions."
+export const ProjectsDescription = "A collection of my recent projects and applications. Each project represents a unique challenge and opportunity to explore different technologies and solutions.";
+
+export enum SectionId {
+  HERO = "hero",
+  SKILLS = "skills",
+  PROJECTS = "projects",
+  ABOUT = "about",
+  BLOG = "blog",
+  CONTACT = "contact",
+}
+
+export const links: NavLinksType[] = [
+  { id: SectionId.HERO, label: "_home", hasIcon: true, iconName: "hero" },
+  { id: SectionId.SKILLS, label: "_skills", hasIcon: true, iconName: "skills" },
+  { id: SectionId.PROJECTS, label: "_projects", hasIcon: false, iconName: "default" },
+  { id: SectionId.ABOUT, label: "_about", hasIcon: false, iconName: "default" },
+  { id: SectionId.BLOG, label: "_blog", hasIcon: false, iconName: "default" },
+  { id: SectionId.CONTACT, label: "_contact", hasIcon: false, iconName: "default" },
+];
 
 
